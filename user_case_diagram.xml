@@ -1,0 +1,178 @@
+<mxfile host="app.diagrams.net" modified="2025-11-29T14:45:16.789Z" agent="Gemini/1.0" etag="qg5s_u8_N3BD3a7n2a-e" version="22.1.2" type="device">
+  <diagram name="Page-1" id="a9a23c28-9c17-4e94-9b19-7d2d3a1b4c6e">
+    <mxGraphModel dx="1434" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Actors -->
+        <mxCell id="2" value="Customer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="250" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="Staff" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="650" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="40" value="Superadmin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1050" width="30" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- General Use Cases -->
+        <mxCell id="41" value="Login" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="50" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="42" value="Register" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="50" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Customer Use Cases -->
+        <mxCell id="3" value="Manage Account" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="150" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="Update Profile" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="150" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Online Ordering" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="250" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Browse Products" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="250" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="Place Order" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="700" y="250" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="Checkout" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="900" y="250" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="Make Reservation" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="350" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="View Order History" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="450" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="View Vouchers" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="250" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="Get Support" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="550" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="Chat with Agent" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="550" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="View Notifications" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="50" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Staff Use Cases -->
+        <mxCell id="30" value="Process Sale" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="650" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="Manage Inventory" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="750" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="Manage Reservations" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="850" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="Generate Reports" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="950" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Superadmin Use Cases -->
+        <mxCell id="49" value="Manage Users" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1050" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="50" value="System Configuration" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1150" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="51" value="View Audit Logs" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1250" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Edges -->
+        <!-- General Connections -->
+        <mxCell id="44" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="2" target="41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="45" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="29" target="41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="46" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="40" target="41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="47" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="2" target="42" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Customer Connections -->
+        <mxCell id="16" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="2" target="3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="2" target="6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="18" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="2" target="10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="19" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="2" target="11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="20" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="2" target="13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="2" target="15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- <<include>> and <<extend>> Connections -->
+        <mxCell id="48" value="&lt;&lt;include&gt;&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;" parent="1" source="3" target="43" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="&lt;&lt;include&gt;&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;" parent="1" source="6" target="7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="&lt;&lt;include&gt;&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;" parent="1" source="6" target="8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="&lt;&lt;include&gt;&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;" parent="1" source="8" target="9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="&lt;&lt;extend&gt;&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;" parent="1" source="12" target="9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="&lt;&lt;include&gt;&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;" parent="1" source="13" target="14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Staff Connections -->
+        <mxCell id="31" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="29" target="30" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="29" target="32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="35" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="29" target="34" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="37" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="29" target="36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="38" value="&lt;&lt;include&gt;&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;" parent="1" source="30" target="9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="39" value="&lt;&lt;include&gt;&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;" parent="1" source="30" target="12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Superadmin Connections -->
+        <mxCell id="52" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="40" target="49" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="40" target="50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="54" style="edgeStyle=none;html=1;endArrow=block;endFill=0;" parent="1" source="40" target="51" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
