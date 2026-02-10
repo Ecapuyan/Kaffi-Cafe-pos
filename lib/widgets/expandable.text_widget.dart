@@ -11,14 +11,14 @@ class ExpandableTextWidget extends StatefulWidget {
   final int maxLines;
 
   const ExpandableTextWidget({
-    Key? key,
+    super.key,
     required this.text,
     this.fontSize = 12,
     this.fontFamily = 'Regular',
     this.color = Colors.black,
     this.readmoreColor = bayanihanBlue,
     this.maxLines = 2,
-  }) : super(key: key);
+  });
 
   @override
   _ExpandableTextWidgetState createState() => _ExpandableTextWidgetState();

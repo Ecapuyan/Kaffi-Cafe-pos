@@ -26,8 +26,8 @@ class _OrderScreenState extends State<OrderScreen>
   final TextEditingController _searchController = TextEditingController();
   String _searchQuery = '';
   String? _currentBranch;
-  List<DocumentSnapshot> _reservations = [];
-  bool _isLoadingReservations = false;
+  final List<DocumentSnapshot> _reservations = [];
+  final bool _isLoadingReservations = false;
   late TabController _tabController;
 
   @override
@@ -43,7 +43,7 @@ class _OrderScreenState extends State<OrderScreen>
   }
 
   Future<void> _getCurrentBranch() async {
-    final currentBranch = await BranchService.getSelectedBranch();
+    final currentBranch = BranchService.getSelectedBranch();
     if (mounted) {
       setState(() {
         _currentBranch = currentBranch;
@@ -2004,7 +2004,7 @@ class _OrderScreenState extends State<OrderScreen>
 
         if (reservationQuery.docs.isNotEmpty) {
           final reservationDoc = reservationQuery.docs.first;
-          final reservationData = reservationDoc.data() as Map<String, dynamic>;
+          final reservationData = reservationDoc.data();
 
           print('Reservation document data: $reservationData');
 

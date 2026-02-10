@@ -150,7 +150,7 @@ class _BranchSelectionScreenState extends State<BranchSelectionScreen> {
                       ),
                     ),
                   );
-                }).toList(),
+                }),
                 const SizedBox(height: 30),
                 ButtonWidget(
                   radius: 12,

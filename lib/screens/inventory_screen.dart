@@ -263,7 +263,7 @@ class _InventoryScreenState extends State<InventoryScreen> {
     File? newImage;
 
     // Function to upload image to Firebase Storage
-    Future<String?> _uploadImage(String productId) async {
+    Future<String?> uploadImage(String productId) async {
       if (newImage == null) return currentImageUrl;
 
       try {
@@ -385,7 +385,7 @@ class _InventoryScreenState extends State<InventoryScreen> {
                   ),
                   const SizedBox(height: 12),
                   DropdownButtonFormField<String>(
-                    value: selectedCategory,
+                    initialValue: selectedCategory,
                     decoration: InputDecoration(
                       labelText: 'Category',
                       labelStyle: TextStyle(color: Colors.grey[600]),
@@ -549,8 +549,8 @@ class _InventoryScreenState extends State<InventoryScreen> {
                   }
 
                   // Upload image if selected
-                  if (newImage != null && productId != null) {
-                    final imageUrl = await _uploadImage(productId);
+                  if (newImage != null) {
+                    final imageUrl = await uploadImage(productId);
                     if (imageUrl != null) {
                       await _firestore
                           .collection('products')

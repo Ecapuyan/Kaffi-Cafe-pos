@@ -23,18 +23,18 @@ class _ReservationScreenState extends State<ReservationScreen> {
   DateTime _selectedDate = DateTime.now();
   String? _selectedTime;
   String? _selectedTableId;
-  int _numberOfGuests = 1;
+  final int _numberOfGuests = 1;
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _orderController = TextEditingController();
   List<String> _availableTimeSlots = [];
   bool _isLoading = true;
-  Map<String, bool> _tableAvailability = {};
+  final Map<String, bool> _tableAvailability = {};
 
   // Table management state
   bool _isTableManagementMode = false;
-  Map<String, bool> _tableEnabledStatus = {};
+  final Map<String, bool> _tableEnabledStatus = {};
   Map<String, dynamic> _tableReservations = {};
-  Map<String, String> _tableDisableReasons = {};
+  final Map<String, String> _tableDisableReasons = {};
   Timer? _reservationExpiryTimer;
   StreamSubscription? _reservationsListener;
 
@@ -830,7 +830,7 @@ class _ReservationScreenState extends State<ReservationScreen> {
               surface: plainWhite,
               onSurface: textBlack,
             ),
-            dialogBackgroundColor: plainWhite,
+            dialogTheme: DialogThemeData(backgroundColor: plainWhite),
           ),
           child: child!,
         );
@@ -2121,9 +2121,9 @@ class _ReservationScreenState extends State<ReservationScreen> {
                           final minute = int.parse(hourMin[1]);
 
                           if (timeParts.length > 1) {
-                            if (timeParts[1] == 'PM' && hour != 12)
+                            if (timeParts[1] == 'PM' && hour != 12) {
                               hour += 12;
-                            else if (timeParts[1] == 'AM' && hour == 12)
+                            } else if (timeParts[1] == 'AM' && hour == 12)
                               hour = 0;
                           }
 
@@ -2627,7 +2627,7 @@ class _ReservationScreenState extends State<ReservationScreen> {
                         child: SizedBox(
                           width: 500,
                           child: DropdownButtonFormField<String>(
-                            value: _historyFilter,
+                            initialValue: _historyFilter,
                             decoration: InputDecoration(
                               labelText: 'Status',
                               labelStyle: TextStyle(

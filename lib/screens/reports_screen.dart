@@ -44,7 +44,7 @@ class _SalesReportScreenState extends State<SalesReportScreen>
   }
 
   Future<void> _getCurrentBranch() async {
-    final currentBranch = await BranchService.getSelectedBranch();
+    final currentBranch = BranchService.getSelectedBranch();
     if (mounted) {
       setState(() {
         _currentBranch = currentBranch;
@@ -145,8 +145,7 @@ class _SalesReportScreenState extends State<SalesReportScreen>
         .where('timestamp',
             isGreaterThanOrEqualTo: Timestamp.fromDate(startOfWeek))
         .where('timestamp',
-            isLessThan:
-                Timestamp.fromDate(startOfWeek.add(Duration(days: 7))))
+            isLessThan: Timestamp.fromDate(startOfWeek.add(Duration(days: 7))))
         .get();
 
     for (var doc in weeklySnapshot.docs) {
@@ -377,8 +376,7 @@ class _SalesReportScreenState extends State<SalesReportScreen>
               .where('branch', isEqualTo: _currentBranch)
               .where('timestamp',
                   isGreaterThanOrEqualTo: Timestamp.fromDate(weekStart))
-              .where('timestamp',
-                  isLessThan: Timestamp.fromDate(weekEnd))
+              .where('timestamp', isLessThan: Timestamp.fromDate(weekEnd))
               .get();
 
           double totalIncome = 0.0;
@@ -584,7 +582,7 @@ class _SalesReportScreenState extends State<SalesReportScreen>
               primary: AppTheme.primaryColor,
               onPrimary: Colors.white,
             ),
-            dialogBackgroundColor: Colors.white,
+            dialogTheme: DialogThemeData(backgroundColor: Colors.white),
           ),
           child: child!,
         );
@@ -629,17 +627,17 @@ class _SalesReportScreenState extends State<SalesReportScreen>
                       pw.TableRow(
                         children: [
                           pw.Text('Date',
-                              style: pw.TextStyle(
-                                  fontWeight: pw.FontWeight.bold)),
+                              style:
+                                  pw.TextStyle(fontWeight: pw.FontWeight.bold)),
                           pw.Text('Total Sales (P)',
-                              style: pw.TextStyle(
-                                  fontWeight: pw.FontWeight.bold)),
+                              style:
+                                  pw.TextStyle(fontWeight: pw.FontWeight.bold)),
                           pw.Text('Transactions',
-                              style: pw.TextStyle(
-                                  fontWeight: pw.FontWeight.bold)),
+                              style:
+                                  pw.TextStyle(fontWeight: pw.FontWeight.bold)),
                           pw.Text('Avg. Transaction (P)',
-                              style: pw.TextStyle(
-                                  fontWeight: pw.FontWeight.bold)),
+                              style:
+                                  pw.TextStyle(fontWeight: pw.FontWeight.bold)),
                         ],
                       ),
                       ...report.map((entry) => pw.TableRow(
@@ -741,7 +739,7 @@ class _SalesReportScreenState extends State<SalesReportScreen>
               SizedBox(
                 width: 200,
                 child: DropdownButtonFormField<String>(
-                  value: _selectedPeriod,
+                  initialValue: _selectedPeriod,
                   dropdownColor: AppTheme.primaryColor,
                   decoration: InputDecoration(
                     filled: true,

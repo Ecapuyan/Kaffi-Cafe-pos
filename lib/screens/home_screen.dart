@@ -1368,8 +1368,9 @@ class _HomeScreenState extends State<HomeScreen>
 
                 // If "All" category is selected, show all products
                 // Otherwise, filter by specific category
-                if (category != 'All' && productCategory != category)
+                if (category != 'All' && productCategory != category) {
                   return false;
+                }
 
                 // If searching, also filter by name
                 if (_searchQuery.isNotEmpty) {

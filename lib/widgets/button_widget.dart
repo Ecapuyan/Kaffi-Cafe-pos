@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:kaffi_cafe_pos/utils/colors.dart';
-import 'package:kaffi_cafe_pos/utils/app_theme.dart';
 import 'package:kaffi_cafe_pos/widgets/text_widget.dart';
 
 class ButtonWidget extends StatelessWidget {

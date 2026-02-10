@@ -5,7 +5,7 @@ import 'package:kaffi_cafe_pos/utils/colors.dart';
 class ViewImageWidget extends StatelessWidget {
   String image;
 
-  ViewImageWidget({required this.image});
+  ViewImageWidget({super.key, required this.image});
 
   @override
   Widget build(BuildContext context) {

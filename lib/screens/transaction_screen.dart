@@ -57,7 +57,7 @@ class _TransactionScreenState extends State<TransactionScreen> {
   }
 
   Future<void> _getCurrentBranch() async {
-    final currentBranch = await BranchService.getSelectedBranch();
+    final currentBranch = BranchService.getSelectedBranch();
     if (mounted) {
       setState(() {
         _currentBranch = currentBranch;
@@ -474,8 +474,7 @@ class _TransactionScreenState extends State<TransactionScreen> {
                 pw.Text('Prepared by: Administrator',
                     style: pw.TextStyle(
                         fontSize: 10, fontStyle: pw.FontStyle.italic)),
-                pw.Text(
-                    'Page ${context.pageNumber} of ${context.pagesCount}',
+                pw.Text('Page ${context.pageNumber} of ${context.pagesCount}',
                     style: const pw.TextStyle(fontSize: 8)),
               ],
             );
@@ -582,8 +581,7 @@ class _TransactionScreenState extends State<TransactionScreen> {
                     final data = doc.data() as Map<String, dynamic>;
                     final items = data['items'] as List<dynamic>;
                     final itemsText = items
-                        .map((item) =>
-                            '${item['name']}(${item['quantity']})')
+                        .map((item) => '${item['name']}(${item['quantity']})')
                         .join(', ');
 
                     return pw.TableRow(
@@ -613,7 +611,7 @@ class _TransactionScreenState extends State<TransactionScreen> {
                                 style: const pw.TextStyle(fontSize: 9))),
                       ],
                     );
-                  }).toList(),
+                  }),
                 ],
               ),
             ];
@@ -852,7 +850,7 @@ class _TransactionScreenState extends State<TransactionScreen> {
                     double dayRevenue = 0.0;
 
                     for (var transaction in dayTransactions) {
-                      final data = transaction as Map<String, dynamic>;
+                      final data = transaction;
                       // Fixed: Use 'total' instead of 'totalAmount' for consistency
                       dayRevenue += data['total'] ?? 0.0;
                       final items = data['items'] as List<dynamic>;
@@ -883,7 +881,7 @@ class _TransactionScreenState extends State<TransactionScreen> {
                         ),
                       ],
                     );
-                  }).toList(),
+                  }),
                 ],
               ),
 
@@ -983,7 +981,7 @@ class _TransactionScreenState extends State<TransactionScreen> {
                         ),
                       ],
                     );
-                  }).toList(),
+                  }),
                 ],
               ),
             ];

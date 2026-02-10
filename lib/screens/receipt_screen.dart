@@ -67,7 +67,7 @@ class _ReceiptScreenState extends State<ReceiptScreen> {
               primary: AppTheme.primaryColor,
               onPrimary: Colors.white,
             ),
-            dialogBackgroundColor: Colors.white,
+            dialogTheme: DialogThemeData(backgroundColor: Colors.white),
           ),
           child: child!,
         );

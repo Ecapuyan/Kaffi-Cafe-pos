@@ -8,7 +8,7 @@ import 'package:kaffi_cafe_pos/screens/reports_screen.dart';
 import 'package:kaffi_cafe_pos/screens/reservation_screen.dart';
 import 'package:kaffi_cafe_pos/screens/settings_screen.dart';
 import 'package:kaffi_cafe_pos/screens/transaction_screen.dart';
-import 'package:kaffi_cafe_pos/utils/colors.dart';
+import 'package:kaffi_cafe_pos/screens/voucher_screen.dart';
 import 'package:kaffi_cafe_pos/utils/app_theme.dart';
 import 'package:kaffi_cafe_pos/utils/branch_service.dart';
 import 'package:kaffi_cafe_pos/utils/role_service.dart';
@@ -157,6 +157,33 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     },
                     title: TextWidget(
                       text: 'Products',
+                      fontSize: 16,
+                      fontFamily: 'Medium',
+                      color: Colors.white,
+                    ),
+                    hoverColor: Colors.white10,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  DividerWidget(),
+                ],
+                if (_isSuperAdmin) ...[
+                  ListTile(
+                    leading: const Icon(
+                      Icons.local_offer,
+                      color: Colors.white,
+                      size: 26,
+                    ),
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const VoucherScreen()),
+                      );
+                    },
+                    title: TextWidget(
+                      text: 'Voucher Management',
                       fontSize: 16,
                       fontFamily: 'Medium',
                       color: Colors.white,
