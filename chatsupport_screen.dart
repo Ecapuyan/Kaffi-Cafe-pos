@@ -104,10 +104,10 @@ class _FaqScreenState extends State<FaqScreen> {
       }
 
       // Default response if no match is found
-      return 'I'm sorry, I don't have information about that. You can ask me about our menu, operating hours, location, ordering process, rewards program, or app features.';
+      return "I'm sorry, I don't have information about that. You can ask me about our menu, operating hours, location, ordering process, rewards program, or app features.";
     } catch (e) {
       print('Error querying chatbot rules: $e');
-      return 'I'm having trouble connecting to the server. Please try again later.';
+      return "I'm having trouble connecting to the server. Please try again later.";
     }
   }
 
