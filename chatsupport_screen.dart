@@ -27,7 +27,7 @@ class _FaqScreenState extends State<FaqScreen> {
     super.initState();
     // Add welcome message
     _addBotMessage(
-        'Hello! I'm here to help you with any questions about Kaffi Café. Feel free to ask me anything!');
+        "Hello! I'm here to help you with any questions about Kaffi Café. Feel free to ask me anything!");
   }
 
   @override
